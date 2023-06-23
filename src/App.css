@@ -1,0 +1,68 @@
+#root {width:100%;}
+
+.App {width:100%; text-align:center; padding:0 20px; background:var(--BgColor); color:hsl(200, 15%, 8%);}
+.App > * {width:100%; max-width:1480px;  margin:0 auto; display:flex; flex-direction:column; place-items:stretch; place-content:stretch; padding:0.5em 0;}
+
+
+/* #Header -- START */
+#Header {height:80px; flex-flow:row wrap; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc;}
+#Header h1 {font-size:1.75em; color:var(--TxtColor)}
+#Header button {border:1px solid var(--InputColor); color:var(--TxtColor); background:var(--UIColor); padding:0.5em 1em; border-radius:0.5em; font-weight:400;}
+/* #Header -- END */
+
+
+/* #Container -- START */
+#Container {min-height:calc(100vh - 120px); padding:1em 0;}
+#Container > div {margin-top:1em;}
+
+.searchSection {margin-bottom:3em;}
+.searchSection input {width:40%; max-width:400px; border:0; border-bottom:1px solid var(--InputColor); color:var(--TxtColor); background:none; margin-right:10px; outline:0; font-weight:300;}
+.searchSection button {border:1px solid var(--InputColor); color:var(--TxtColor); background:var(--UIColor); padding:5px 10px; border-radius:0.5em; font-weight:400;}
+
+.listSection {width:100%; display:flex; flex-flow:row wrap; justify-content:flex-start; align-items:stretch;}
+.listSection .listItem {width:calc((100% - 75px) / 4); display:flex; flex-direction:column; align-items:stretch; justify-content:space-between; margin-right:25px; margin-bottom:30px; text-align:left; box-shadow:0 0 10px rgba(0,0,0,0.2); background:#fff;}
+.listSection .listItem:nth-child(4n) {margin-right:0;}
+.listSection .listItem .thumb {position:relative; width:100%; padding-top:66.66%; overflow:hidden;}
+.listSection .listItem .info {padding:1.75em 7%;}
+.listSection .listItem .info h2.name {font-size:1.25em;}
+.listSection .listItem .info h2.name span {display:block; font-size:0.75em; margin-top:0.5em;}
+.listSection .listItem .info ul.summary {margin-top:1.5em; font-size:0.875em;}
+.listSection .listItem .info ul li {margin-top:2px;}
+
+nav {width:100%; display:flex; flex-flow:row wrap; justify-content:flex-start; align-items:center;}
+nav a {border:1px solid var(--InputColor); color:var(--TxtColor); background:var(--UIColor); padding:0.5em 1em; border-radius:0.5em; font-weight:400;}
+
+.Detail {display:flex; flex-flow:row wrap; padding:1em 0 3em;}
+.Detail .thumb {width:50%; min-width:300px;}
+.Detail .thumb img {width:100%; display:block;}
+.Detail .info {width:50%; display:flex; flex-direction:column; justify-content:center; text-align:left; padding-left:5%; font-size:1.125em;}
+.Detail .info h2.name {font-size:2em;}
+.Detail .info h2.name span {display:block; font-size:0.875em; margin-top:0.5em;}
+.Detail .info ul.summary {margin-top:5%;}
+.Detail .info ul li {margin-top:8px;}
+/* #Container -- END */
+
+
+/* #Footer -- START */
+#Footer {height:40px; place-content:center; font-size:0.75em; border-top:1px solid #ccc;}
+#Footer p {color:var(--TxtColor);}
+/* #Footer -- END */
+
+
+
+@media only screen and (max-width:1024px) {
+    .listSection .listItem {width:calc((100% - 50px) / 3);}
+    .listSection .listItem:nth-child(4n) {margin-right:auto;}
+    .listSection .listItem:nth-child(3n) {margin-right:0;}
+
+    .Detail {flex-direction:column;}
+    .Detail .thumb {width:100%; margin-bottom:2em;}
+    .Detail .info {width:100%; padding:0;}
+}
+
+@media only screen and (max-width:768px) {
+    .listSection .listItem {width:calc((100% - 25px) / 2);}
+    .listSection .listItem:nth-child(3n) {margin-right:auto;}
+    .listSection .listItem:nth-child(2n) {margin-right:0;}
+}
+
