@@ -10,7 +10,7 @@
   - 검색기능(진행중)
 
 ## 서비스URL
-  https://anjxxyi.github.io/react-countries-app/  (로드실패/수정중 ~> 아래 이미지 참고)
+  https://anjxxyi.github.io/react-countries-app/
 
   ![1](https://github.com/anjxxyi/react-countries-app_develop/assets/119813212/73491127-af10-4947-b003-ce0457a2adce)
   
